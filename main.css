@@ -1,0 +1,27 @@
+input {
+	left: 30%;
+	right: 30%;
+}
+
+.content {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+table, th, td {
+   border: 1px solid black;
+}
+
+.compat-table {
+	font-size: 2vw;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 20px;
+}
+
+/*#compat-mobile {
+	text-align: center;
+	margin: 0 auto;
+}
+*/

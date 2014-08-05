@@ -1,23 +1,79 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <!--
 | DESIGNED AND DEVELOPED BY SUPA NOMAL
 -->
 <html>
 <head>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	<link rel="stylesheet" href="main.css" />
+
+	<script src="js/main.js"></script>
 </head>
 
 <body>
-	<div>
-		<input type="button" value="Vibration" id="vibrationButton">
-		<input type="button" value="StopVib" id="stopVibButton">
-		<label for="basic">Duration:(ms)</label>
-		<input type="text" name="name" id="time" value="">
-		<label for="basic">Interval:(ms)</label>
-		<input type="text" name="name" id="interval" value="">
-		<label for="basic">Repeat(0: infinite)</label>
-		<input type="text" name="name" id="repeat" value="">
-	</div>
-</body>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>Web Vibration Test</h1>
+		</div><!-- /header -->
+		<div class="content">
+			<input type="button" value="Vibration" id="vibrationButton">
+			<input type="button" value="StopVib" id="stopVibButton">
+			<label for="basic">Duration:(ms)</label>
+			<input type="text" name="name" id="duration" value="1000">
+			<label for="basic">Interval:(ms)</label>
+			<input type="text" name="name" id="interval" value="1000">
+			<label for="basic">Repeat(0: infinite)</label>
+			<input type="text" name="name" id="repeat" value="">
+
+
+			<div style="display: block;" id="compat-desktop">
+				<table class="compat-table">
+					<tbody>
+						<tr>
+							<th>Feature</th>
+							<th>Chrome</th>
+							<th>Firefox (Gecko)</th>
+							<th>Internet Explorer</th>
+							<th>Opera</th>
+							<th>Safari</th>
+						</tr>
+						<tr>
+							<td>Basic support</td>
+							<td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span> <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">webkit</span></td>
+							<td>11.0 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">moz</span><br>
+								16 (no prefix)</td>
+								<td><span style="color: #f00;">Not&nbsp;supported</span></td>
+								<td><span style="color: #f00;">Not&nbsp;supported</span></td>
+								<td><span style="color: #f00;">Not&nbsp;supported</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div style="display: block;" id="compat-mobile">
+					<table class="compat-table">
+						<tbody>
+							<tr>
+								<th>Feature</th>
+								<th>Android</th>
+								<th>Firefox Mobile (Gecko)</th>
+								<th>IE Mobile</th>
+								<th>Opera Mobile</th>
+								<th>Safari Mobile</th>
+							</tr>
+							<tr>
+								<td>Basic support</td>
+								<td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span> <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">webkit</span></td>
+								<td>11.0 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">moz</span></td>
+								<td><span style="color: #f00;">Not&nbsp;supported</span></td>
+								<td><span style="color: #f00;">Not&nbsp;supported</span></td>
+								<td><span style="color: #f00;">Not&nbsp;supported</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</body>
