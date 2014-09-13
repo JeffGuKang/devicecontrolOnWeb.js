@@ -10,7 +10,28 @@
 	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 	<link rel="stylesheet" href="main.css" />
 
-	<script src="js/main.js"></script>
+	<script src="js/vibrationControlOnBrowser.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#vibrationButton").click(function() {
+			if(vibrateInfinite) {
+				clearInterval(vibrateInfinite);
+			}
+			window.navigator.vibrate(0);
+			var duration = $("#duration").val();
+			var interval = $("#interval").val();
+			var repeat = $("#repeat").val();
+			duration = parseInt(duration, 10);
+			interval = parseInt(interval, 10);
+			repeat = parseInt(repeat, 10);
+			startInfiniteVibration(duration, interval, repeat);
+		});
+
+		$("#stopVibButton").click(function() {
+			stopVibrate();
+		});
+	});
+	</script>
 </head>
 
 <body>
