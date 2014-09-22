@@ -1,16 +1,21 @@
-# README #
+# VibrationControlOnBrowser.js #
 
-###[Demo](http://www.supanomal.com/opensources/mobile_vibration/)###
+A simple vibration control of devices javascript plugin
 
-This README would normally document whatever steps are necessary to get your application up and running.
+###example:###
+- http://www.supanomal.com/opensources/mobile_vibration/
+
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Quick vibration control for devices on web browser.
 
 ### How do I get set up? ###
+Setting up VibrationControlOnBrowser.js is pretty simple. Just download the js and include it in your HTML:
+
+```javascript
+<script type="text/javascript" src="path/to/VibrationControlOnBrowser.js"></script>
+```
 
 * Summary of set up
 * Configuration
