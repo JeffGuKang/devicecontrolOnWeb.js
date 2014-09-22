@@ -26,7 +26,7 @@ function stopVibrate() {
 }
 
 //Infinte vibration
-function startInfiniteVibration(_duration, _interval, _numberoftime) {
+function startVibration(_duration, _interval, _numberoftime) {
 	if(vibrateInfinite) {
 			clearInterval(vibrateInfinite);
 		}
