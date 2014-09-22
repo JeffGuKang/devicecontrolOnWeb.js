@@ -22,8 +22,13 @@ Setting up VibrationControlOnBrowser.js is pretty simple. Just download the js a
 ```javascript
 startVibration(_duration, _interval, _numberoftime)
 ```
-
-
+* _duration
+ * Duration of vibration
+* _interval
+ * interval until next vibration
+* _numberoftime
+ * 0: infinite
+ * _numberoftime > 0 : number of vibration count
 ## Change Log##
 
 ###1.0###
