@@ -11,7 +11,7 @@ A simple vibration control of devices javascript plugin
 ## Installation ##
 Setting up VibrationControlOnBrowser.js is pretty simple. Just download the js and include it in your HTML:
 
-```javascript
+```HTML
 
 <script type="text/javascript" src="path/to/VibrationControlOnBrowser.js"></script>
 
