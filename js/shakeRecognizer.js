@@ -1,7 +1,7 @@
 var thresholdOfShake= 4.7;
 
-function shakeRecongnizerOn() {
-	window.addEventListener("devicemotion", shake(event));
+function shakeRecongnizerOn(didShake) {
+	window.addEventListener("devicemotion", shake(event, didShake()));
 }
 
 function shakeRecongnizerOff() {
@@ -28,11 +28,12 @@ function shakeRecognizer(x, y, z) {
 		return false;
 }
 
-function shake(event) {
+function shake(event, didshake){
 	var x = event.acceleration.x;
 	var y = event.acceleration.y;
 	var z = event.acceleration.z;
 	if(shakeRecognizer(x, y, z)) {
+		didshake();
 		return true; //true is shaked.
 	}
 	else {
