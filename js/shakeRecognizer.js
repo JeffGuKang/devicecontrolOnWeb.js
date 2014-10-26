@@ -1,11 +1,23 @@
+// https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent
+
+// Default threshold of shake 4.6
 var thresholdOfShake= 4.7;
 
-function shakeRecongnizerOn(didShake) {
-	window.addEventListener("devicemotion", shake(event, didShake()));
+function shakeRecongnizerOn(_didShake) {
+	// window.addEventListener("devicemotion", shake);
+	window.addEventListener("devicemotion",
+		function() {
+			shake(_didShake);
+		}
+	);
 }
 
-function shakeRecongnizerOff() {
-	window.removeEventListener("devicemotion", shake(event));
+function shakeRecongnizerOff(_didShake) {
+	window.removeEventListener("devicemotion",
+		function() {
+			shake(_didShake);
+		}
+	);
 }
 
 function shakeRecognizer(x, y, z) {
@@ -28,12 +40,12 @@ function shakeRecognizer(x, y, z) {
 		return false;
 }
 
-function shake(event, didshake){
+function shake(_didShake){
 	var x = event.acceleration.x;
 	var y = event.acceleration.y;
 	var z = event.acceleration.z;
 	if(shakeRecognizer(x, y, z)) {
-		didshake();
+		_didShake();
 		return true; //true is shaked.
 	}
 	else {
@@ -42,6 +54,3 @@ function shake(event, didshake){
 }
 
 
-//window.removeEventListener("devicemotion", function(event) {
-//
-//}, true);
