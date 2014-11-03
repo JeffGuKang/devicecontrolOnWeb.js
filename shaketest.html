@@ -1,0 +1,52 @@
+	<!DOCTYPE html>
+<!--
+| DESIGNED AND DEVELOPED BY Jeff Kang in supanomal
+-->
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	<link rel="stylesheet" href="shakeTest.css" />
+
+	<script src="js/shakeRecognizer.js"></script>
+	<script type="text/javascript">
+		var shakeCount = 0;
+
+		function shakeDidRecognize() {
+			shakeCount++;
+			$("#shakeCount").text(shakeCount);
+
+			var fontSize = $("#shakeLabel").css("font-size");
+			if (fontSize < 60) {
+				fontSize++
+				$("#shakeLabel").css("font-size", fontSize.toString());
+			}
+		}
+
+		shakeRecongnizerOn(shakeDidRecognize);
+
+	</script>
+</head>
+
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>Shake Test</h1>
+		</div>
+		<div class="content">
+			<div id="shakeCountDiv">
+				<p id="shakeLabel">SHAKE</p>
+				<span id="shakeCount">0</span>
+				<div id="accelInfo">
+					<p id="accelX">0</p>
+					<p id="accelY">0</p>
+					<p id="accelZ">0</p>
+					<p id="filterResult">0</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

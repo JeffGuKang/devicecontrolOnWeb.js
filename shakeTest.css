@@ -1,0 +1,19 @@
+
+
+
+.content {
+	text-align: center;
+}
+
+#shakeLabel {
+	font-size: 30pt;
+	font-weight: bold;
+}
+
+#shakeCountDiv {
+	font-size: 30pt;
+}
+
+#accelInfo {
+	font-size: 15pt;
+}
